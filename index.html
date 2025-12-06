@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Statistiques sur l'eau</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link href="StylePage3.css" rel="stylesheet">
+</head>
+
+<style>
+
+      :root {
+      --bg: #060617;
+	  --text-main: #e8b7eb;
+      --text-soft: #9ca3af;
+	  }
+   
+   body {
+      min-height: 800px;
+      font-family: "Poppins", "Segoe UI Emoji", "Noto Color Emoji", "Apple Color Emoji", sans-serif;
+      background: #1e293b;
+      color: var(--text-main);
+      line-height: 26px;
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+    }
+    }
+    main {
+      max-width: 900px;
+      margin: 32px auto;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 32px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    header h1 {
+      font-weight: 600;
+      font-size: 32px;
+      margin-bottom: 5px;
+    }
+    header p {
+      font-weight: 300;
+      font-size: 16px;
+      color: #00796b;
+    }
+    .layout {
+      display: sticky;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .panel {
+      padding: 10px;
+	  border-radius: 20px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+    }
+
+    .panel h2 {
+      font-weight: 600;
+      margin-bottom: 16px;
+      font-size: 18px;
+      border-bottom: 2px solid #004d40;
+      padding-bottom: 5px;
+    }
+   .panel a {
+      display: block;
+      text-decoration: none;
+	  color: white;
+      padding: 25px;
+      border-radius: 15px;
+      border: 1px solid lightblue;
+      font-size: 14px;
+      margin-bottom: 6px;
+	  margin-left: 3 px;
+      background: rgba(15, 23, 42, 0.9);
+      transition: background 0.9s, transform 0.5s, border-color 0.2s;
+    }
+	
+   .panel a:hover {
+      background: transparent;
+      border-color: lightblue;
+      transform: translateX(5px);
+    }
+	
+    article#stats h2 {
+      font-weight: 600;
+      margin-bottom: 16px;
+      font-size: 24px;
+      border-bottom: 2px solid #004d40;
+      padding-bottom: 8px;
+    }
+
+    .stat-item {
+      margin-bottom: 16px;
+      background: #b2dfdb;
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,77,64,0.1);
+    }
+    .stat-item h3 {
+      margin: 0 0 8px 0;
+      font-weight: 600;
+      font-size: 18px;
+      color: #004d40;
+    }
+    .stat-item p {
+      margin: 0;
+      font-weight: 400;
+      color: #00695c;
+      font-size: 14px;
+    }
+    .stat-value {
+      font-weight: 700;
+      font-size: 20px;
+      color: #00796b;
+      margin-bottom: 8px;
+    }
+    .bar-container {
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 8px;
+      height: 18px;
+      margin-top: 8px;
+      overflow: hidden;
+    }
+	
+    .bar-fill {
+      height: 100%;
+      background: #00796b;
+      width: 0;
+      border-radius: 8px 0 0 8px;
+      transition: width 1s ease;
+    }
+	
+    footer {
+      text-align: center;
+      margin-top: 32px;
+      font-size: 14px;
+      color: #004d40;
+      font-weight: 300;
+    }
+</style>
+<body>
+  <main>
+    <header>
+      <h1>💧 Statistiques sur l'eau 💧</h1>
+      <p>Quelques chiffres clés pour mieux comprendre la ressource essentielle qu'est l'eau douce.</p>
+    </header>
+
+    <div class="layout">
+      <aside class="panel" aria-label="Ressources complémentaires">
+        <h2>Ressources</h2>
+        <nav>
+          <ul>
+            <li><a href="https://muuajinyota.github.io/Page1/" title="Lien retour vers la page n°1">🌍 Retour Page 1 - - - Boire de l'eau</a></li>
+            <li><a href="https://muuajinyota.github.io/Page2/" title="Lien retour vers la page n°2">💧 Retour PAGE 2 H2O --- <span>Astuces pour bien s'hydrater</span></a></li>
+            <li><a href="https://fr.wikipedia.org/wiki/Eau" target="_blank" rel="noopener" title="Lien vers la page Wikipédia">🌍 Wikipédia - Eau <span>Comprendre la ressource essentielle</span></a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <article id="stats" aria-label="Statistiques sur l'eau douce">
+        <h2>Chiffres clés</h2>
+
+        <div class="stat-item">
+          <div class="stat-value">71%</div>
+          <h3>Surface de la Terre couverte par l'eau</h3>
+          <p>La majorité de la surface terrestre est recouverte d'eau, mais la plupart est salée.</p>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-value">2,2 milliards</div>
+          <h3>Personnes sans accès à l'eau potable</h3>
+          <p>Nombre de personnes dans le monde qui n'ont pas accès à une eau potable sûre à domicile.</p>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-value">0,5%</div>
+          <h3>Eau douce accessible</h3>
+          <p>Part de l'eau douce disponible pour la consommation humaine, provenant des lacs, rivières et nappes peu profondes.</p>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-value">70%</div>
+          <h3>Consommation d'eau par l'agriculture</h3>
+          <p>L'agriculture utilise la majorité de l'eau douce prélevée dans le monde.</p>
+          <div class="bar-container" aria-hidden="true">
+            <div class="bar-fill" style="width:70%;"></div>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-value">10%</div>
+          <h3>Consommation d'eau domestique</h3>
+          <p>Part de l'eau douce utilisée pour les besoins domestiques (boisson, hygiène, cuisine).</p>
+          <div class="bar-container" aria-hidden="true">
+            <div class="bar-fill" style="width:10%; background:#004d40;"></div>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-value">50 à 100 L</div>
+          <h3>Consommation d'eau par personne et par jour</h3>
+          <p>Volume d'eau recommandé par l'OMS pour les besoins quotidiens essentiels.</p>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-value">1,1 milliard</div>
+          <h3>Personnes vivant sous stress hydrique</h3>
+          <p>Population exposée à un stress hydrique élevé, avec un accès limité à l'eau.</p>
+        </div>
+
+      </article>
+    </div>
+
+    <footer>
+      ⚔ 2025 - Rémi - Statistiques sur l'eau.
+    </footer>
+  </main>
+</body>
+</html>
